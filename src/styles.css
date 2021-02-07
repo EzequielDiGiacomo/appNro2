@@ -1,1 +1,98 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    background-color: #F2DBCE;
+  }
+  
+  /* Titulo */
+  .header {
+    padding: 30px 40px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 25px;
+  }
+
+  /* Eliminar márgenes y relleno de la lista */
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Lista */
+
+  ul li {
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background:#A8AEBF;
+    font-size: 20px;
+    transition: 0.2s;
+    border: 1px solid black;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  ul li:hover {
+    background: #ddd;
+  }
+  
+  /* Tachar y cambiar Fuente */
+  ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+    font-style: oblique;
+  }
+  
+  /* Agrega una marca de "marcado" al hacer clic en */
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+  
+  /* Limpiar flota después del encabezado */
+  .header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Entrada */
+  input {
+    margin: 10;
+    border: none;
+    background: #ffffff;
+    border: 1px solid black;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+  }
+  
+  /* botón "Agregar" */
+  .addBtn {
+    padding: 5px;
+    width: 25%;
+    background: #516B8C;
+    float: left;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+   /* transition: 0.3s;
+    border-radius: 10;*/
+  }
+  
+  .addBtn:hover {
+    background-color: #bbb;
+  }
