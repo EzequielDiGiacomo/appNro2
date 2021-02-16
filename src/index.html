@@ -13,49 +13,50 @@
 
 <div id="myDIV" class="header">
   <h2>LISTA DE ELEMENTOS</h2>
-  <input type="text" id="myInput" placeholder="Escribir nombre...">
+  <input type="text" id="btn" placeholder="Escribir nombre...">
   <span onclick="newElement()" class="addBtn">AGREGAR</span>
 </div>
 
-<ul id="myUL">
+<ul id="list">
   <li>Pendrive</li>
   <li>Cable USB</li>
 </ul>
 
 <script>
-  var myNodelist = document.getElementsByTagName("LI");
-  var i;
-  
-// Agregar un símbolo "marcado" al hacer clic en un elemento de la lista
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
 
-// Cree un nuevo elemento de lista al hacer clic en el botón "Agregar
-function newElement() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
+  // marcar en la Lista
+  var list = document.querySelector('ul');
 
-  if (inputValue === '') {
-    alert("Esta vacío el Input");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
+  list.addEventListener('click', function(ev) {
 
-  document.getElementById("myInput").value = "";
+    if (ev.target.tagName === 'LI') {
+      ev.target.classList.toggle('checked');
+    }
 
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
+  }, false);
+
+  // botón Agregar
+  function newElement() {
+    var li = document.createElement("li");
+    var inputValue = document.getElementById("btn").value;
+    var t = document.createTextNode(inputValue);
+    li.appendChild(t);
+
+    if (inputValue === '') {
+      alert("Esta vacío el Input");
+    } else {
+      document.getElementById("list").appendChild(li);
+    }
+
+    document.getElementById("btn").value = "";
+
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        iv.style.display = "none";
+      }
     }
   }
-}
 
 </script>
 
